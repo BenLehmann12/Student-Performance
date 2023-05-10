@@ -67,7 +67,7 @@ p3 <- ggplot(students, aes(Writing_Score)) + geom_histogram(binwidth=5, color="b
 p3
 ```
 ```{r}
-students %>% group_by(Race) %>% summarise(new_mean=round(sum(Avg.score)/n(),2)) %>% ggplot(aes(Race,new_mean,fill=Race))+geom_bar(stat='identity')+geom_text(aes(label = new_mean))
+students %>% group_by(Race) %>% summarise(new_mean=round(sum(Avg.score)/n(),2)) %>% ggplot(aes(Race,new_mean,fill=Race))+geom_bar(stat='identity')+geom_text(aes(label = new_mean)) + ylab("Mean Test Score")
 ```
 
 Now, Let's look at the average score by Gender, We can see the Females perform better than Men in Testing
