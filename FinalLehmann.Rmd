@@ -45,7 +45,8 @@ students %>% group_by(Race, Gender) %>% summarise(n = n()) %>%
 
 
 ```{r}
-
+g1 <- ggplot(students, aes(Gender, Math_Score)) + geom_boxplot() +xlab("Gender") + ylab("Math Scores")
+g1
 ```
 
 
