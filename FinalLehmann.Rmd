@@ -40,8 +40,8 @@ students %>% group_by(Gender)%>% summarise(n=n()) %>% ggplot(aes(Gender,n,fill=G
 students %>% group_by(Race, Gender) %>% summarise(n = n()) %>% 
   ggplot(aes(x = reorder(Race, -n), y = n, fill = Gender)) + 
   geom_col(position = 'dodge')
-``
-`
+```
+
 ```{r}
 students %>% keep(is.numeric) %>%
   gather() %>%
